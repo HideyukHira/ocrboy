@@ -15,13 +15,6 @@ namespace windows_ocr
         //private 英語文字列を定義　"Copy the image to the clipboard and press this button"
         private string myEnglishString = "Copy the image to the clipboard and press this button";
 
-        private JsonSerializerOptions myJsonOption = new JsonSerializerOptions
-        {
-            // 日本語が表示できるようにする
-            Encoder = JavaScriptEncoder.Create(UnicodeRanges.All),
-            // インデントフォーマットあり
-            WriteIndented = true
-        };
 
         public Form1()
         {
@@ -53,15 +46,9 @@ namespace windows_ocr
                 //OCR処理 OcrEngine
                 var ocrResult = await ocr.RecognizeText(mySbitmap);
                 //OCR処理 Text
-                textBox1.Text = ocrResult.Text.Replace(" ", "");
+                textBox1.Text = ocrResult.Text.Replace(" ", " ");
             }
 
-
-
-            //jsonEncodedText にtextBox1の内容を代入
-            JsonEncodedText jsonEncodedText = JsonEncodedText.Encode(textBox1.Text, JavaScriptEncoder.Create(UnicodeRanges.All));
-            //jsonEncodedText をtextに変換し　textbox2へ代入
-            textBox2.Text = "{ \"ocrtext\" : " + '"' + jsonEncodedText.ToString() + '"' + '}';
         }
         //フォームがロードされたら、button1にフォーカスを当てる
         private void Form1_Shown(object sender, EventArgs e)
@@ -74,13 +61,6 @@ namespace windows_ocr
         {
             Clipboard.SetText(textBox1.Text);
         }
-
-        private void textBox2_Click(object sender, EventArgs e)
-        {
-            Clipboard.SetText(textBox2.Text);
-        }
-
-
 
 
     }
