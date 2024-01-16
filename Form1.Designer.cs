@@ -37,18 +37,18 @@
             // textBox1
             // 
             textBox1.Font = new Font("Yu Gothic UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(12, 179);
+            textBox1.Location = new Point(12, 685);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(1282, 893);
+            textBox1.Size = new Size(1282, 668);
             textBox1.TabIndex = 1;
             // 
             // button1
             // 
             button1.BackColor = SystemColors.ActiveCaption;
-            button1.Location = new Point(277, 12);
+            button1.Location = new Point(12, 607);
             button1.Name = "button1";
-            button1.Size = new Size(1017, 144);
+            button1.Size = new Size(1282, 72);
             button1.TabIndex = 4;
             button1.Text = "画像をクリップボードにコピーしてこのボタンを押す";
             button1.UseVisualStyleBackColor = false;
@@ -59,7 +59,7 @@
             pictureBox1.BorderStyle = BorderStyle.FixedSingle;
             pictureBox1.Location = new Point(12, 12);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(259, 144);
+            pictureBox1.Size = new Size(1282, 589);
             pictureBox1.TabIndex = 5;
             pictureBox1.TabStop = false;
             // 
@@ -67,7 +67,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1306, 1084);
+            ClientSize = new Size(1306, 1365);
             Controls.Add(pictureBox1);
             Controls.Add(button1);
             Controls.Add(textBox1);
