@@ -45,8 +45,9 @@ namespace windows_ocr
                 var mySbitmap = await ocr.GetSoftwareSnapShot(myBmp);
                 //OCRˆ— OcrEngine
                 var ocrResult = await ocr.RecognizeText(mySbitmap);
-                //OCRˆ— Text
+                //OCRˆ— Text ”¼Šp‹ó”’‚ğíœ
                 textBox1.Text = ocrResult.Text.Replace(" ", " ");
+                textBox1.Text = ocrResult.Text.Replace(" ", "");
             }
 
         }

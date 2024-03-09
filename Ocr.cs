@@ -50,6 +50,7 @@ namespace WindowsFormsApp1
         {
             OcrEngine ocrEngine = OcrEngine.TryCreateFromUserProfileLanguages();
             // OCR実行
+            //OcrResult https://learn.microsoft.com/ja-jp/uwp/api/windows.media.ocr.ocrresult?view=winrt-22621
             var ocrResult = await ocrEngine.RecognizeAsync(snap);
             return ocrResult;
         }
